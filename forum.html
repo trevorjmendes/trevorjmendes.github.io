@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forum</title>
+	<style>
+			body {
+		  font-family: 'Segoe UI', Tahoma, sans-serif;
+		  background: #f9fafb;
+		  color: #334155;
+		  margin: 0;
+		  padding: 1.5rem;
+		  line-height: 1.6;
+		}
+		
+		h1, h2 {
+		  color: #1e293b;
+		  margin-bottom: 0.5em;
+		  font-weight: 700;
+		}
+
+		h1 {
+		  font-size: 2.2rem;
+		}
+
+		h2 {
+		  font-size: 1.6rem;
+		}
+
+		p {
+		  font-size: 1.05rem;
+		  margin: 1em 0;
+		}
+
+		ul, ol {
+		  margin-left: 1.5rem;
+		  margin-bottom: 1em;
+		  padding-left: 1rem;
+		}
+
+		ul li, ol li {
+		  margin-bottom: 0.4em;
+		  line-height: 1.5;
+		}
+
+		nav {
+		  background: #e2e8f0;
+		  padding: 0.75rem 1.5rem;
+		  border-radius: 10px;
+		  display: flex;
+		  gap: 1rem;
+		  flex-wrap: wrap;
+		}
+
+		nav a {
+		  text-decoration: none;
+		  color: #1e293b;
+		  font-weight: 500;
+		  padding: 0.4rem 0.8rem;
+		  border-radius: 10px;
+		  transition: background 0.3s ease, color 0.3s ease;
+		}
+
+		nav a:hover {
+		  background: #3b82f6;
+		  color: white;
+		}
+
+	</style>
+	<script>
+    function submitPost() {
+      const name = document.getElementById("name").value;
+      const message = document.getElementById("message").value;
+      alert(`Thanks, ${name}! You will recieve a response within the hour.`);
+    }
+  </script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="guide.html">Guide</a>
+			<a href="about.html">About</a>
+			<a href="gallery.html">Gallery</a>
+			<a href="forum.html">Forum</a>
+		</nav>
+		<h1>Forum</h1>
+    </header>
+	<div class="container">
+	<h2>Join the Discussion</h2>
+    <form onsubmit="submitPost(); return false;">
+      <label>Name: <input type="text" id="name" required></label><br><br>
+      <label>Message: <textarea id="message" required></textarea></label><br><br>
+      <input type="submit" value="Post">
+    </form>
+    </div>
+</body>
+</html>
